@@ -1,44 +1,20 @@
-// $ = jQuery's way of naming its stuff.
-// $( ... ) = what's inside () is the "object" we are messin with
-// .ready() = method of $jQ
-// .ready( ... ) = argument/parameter passed to that method
-// function(){} in the method is an IIFE = Immediately Invoked F/n Expresson
 $(document).ready(function () {
-  // alert("page is ready");
+
   console.log("doc is ready");
-  
- 
-  let wowCount = 0;   
-  let wowMsg; 
-  
-//   $("li") 
-//   $('#specificID')
-// $('.someClass ')
 
+  let revName;
 
-  $("#dogeDiv").draggable(
-    {
-      containment: "#dogeHouse",
-      scroll: false,
-      stop: function () {
-        // wowCount = wowCount + 1; 
-        wowCount++; //same as line 19 
-        console.log("we are starting! " + "here is wowCount:" + wowCount);
-        
-        if (wowCount <= 4) {
-          wowMsg = "your wow is weak sauce";
-        }
-        else if (4 < wowCount < 8)
-        {
-          wowMsg = "your wow is whatever";
-        }
-        
-        $("#wowOutput").text(wowMsg + "(" + wowCount + ")");
-    }
-  }
-  );
+  $("#factButton").click(function () {
+    //handle is left blank
+    let userName = $("#userName").val();
+    let coolFact = (generateNameFacts(userName));
 
-  
+    console.log("you clicked the button")
+    console.log(generateNameFacts(userName));
+
+    $("#coolNameFactOutput").html(coolFact);
+
+  });
 
   let userGreeting = "Hello there, "; 
 
@@ -48,3 +24,40 @@ $(document).ready(function () {
     $("#greetingOutput").text(userGreeting);
   });
 });
+
+function generateNameFacts(userName) {
+
+  coolFact = nameLength(userName);
+  coolFact += " <br> " + nameStart(userName);
+  coolFact += "<h3>" + nameEnd(userName) + "</h3>";
+  // coolFact = 'wow, cool name!';
+  console.log("initialized coolFact variable: " + coolFact);
+  return coolFact;
+}
+
+function nameLength(name) {
+
+  return "your name is " + name.length + " letters long!";
+}
+
+function nameStart(name) {
+
+  return "your name starts with " + name[0];
+}
+
+function nameEnd(name) {
+
+  let lastIndex = name.length - 1;
+
+  return "your name ends with " + name[lastIndex];
+}
+
+//function findSpiritAnimal(name) {
+  //some control structure (if/then?)
+
+//some arbitrary thing about name (if starts with vowel?)
+
+//then this animal
+
+//or other animal
+//}
