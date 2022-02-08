@@ -64,7 +64,7 @@ function reverseName(name) {
 
 function findSpiritAnimal(name) {
   //some control structure (if/then?)
-  if (name[0] == 'A') {
+  if (name[0] == 'A' || name[0] == 'E' || name[0] == 'I' || name[0] == 'O' || name[0] == 'U') {
     return "your spirit animal is a tiger"
   }
 
