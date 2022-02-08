@@ -31,7 +31,7 @@ function generateCoolNameFacts(userName) {
   coolFacts += " <br> " + nameStart(userName);
   coolFacts += "<h3> " + nameEnd(userName) + "</h3>";
   coolFacts += "<h2>" + reverseName(userName) + "</h2>";
-  coolFacts += findSpititAnimal(userName);
+  coolFacts += findSpiritAnimal(userName);
 
   console.log("initialized the'm coolFacts variable: " + coolFacts); 
 
