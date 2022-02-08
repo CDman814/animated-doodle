@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
- <title>Delta</title>
+ <title>cumbie-lab-delta</title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
@@ -56,9 +56,9 @@
           <h4 class="card-title">GitHub Link Demo</h4>
           <p class="card-text">Here is a guide on how to link to your REPO (Source Code) & your APP (Deployment)</p>
           
-          <a href="https://github.com/CDman814/animated-doodle" class="card-link" target="affiliate">View the REPO</a>
+          <a href="https://github.com/barrycumbie/effective-enigma" class="card-link" target="affiliate">View the REPO</a>
           
-          <a href="https://cdman814.github.io/animated-doodle/" target="affiliate" class="card-link">View the APP</a>
+          <a href="https://barrycumbie.github.io/effective-enigma/" target="affiliate" class="card-link">View the APP</a>
         </div>
       </div>
 
@@ -68,18 +68,17 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title">Cool Name Facts</h4>
-          <p class="card-text">Gimme your name for cool facts!</p>
+          <p class="card-text">gimme your name for some cool facts!</p>
+          
+          <label for="userName" class="form-label">what ur name?</label>
+          <input type="text" id="userName" class="form-control" name="userName">
+          <button id="btnGetFacts" class="btn btn-secondary">get cool facts</button>
 
-          <label for="userName" class="form-label">what is your name:</label>
-          <input type="text" id="userName" name="form-control"><br><br>
-          <button id="factButton" class="btn-btn-primary">get cool facts!</button>
+          <br> 
 
-          <br>
-
-          <span id="coolNameFactOutput")>
+          <span id="coolNameFactsOutput"> 
 
           </span>
-
           <!-- <a href="#" class="card-link">Card link</a>
           <a href="#" class="card-link">Another link</a> -->
         </div>
