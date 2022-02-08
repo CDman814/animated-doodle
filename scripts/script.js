@@ -53,14 +53,6 @@ function nameEnd(name) {
   return "the last letter of your name is " + name[lastIndex]
 }
 
-function reverseName(name) {
-  
-  let arrName = name.split(); 
-
-  revName = arrName.reverse();
-     
-}
-
 
 function findSpiritAnimal(name) {
   //some control structure (if/then?)
