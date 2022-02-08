@@ -1,63 +1,80 @@
 $(document).ready(function () {
-
   console.log("doc is ready");
+ 
+  let revName; 
 
-  let revName;
 
-  $("#factButton").click(function () {
-    //handle is left blank
-    let userName = $("#userName").val();
-    let coolFact = (generateNameFacts(userName));
+  $
+    ("#btnGetFacts").click(function (){
 
-    console.log("you clicked the button")
-    console.log(generateNameFacts(userName));
+      // handle it if input is blank
 
-    $("#coolNameFactOutput").html(coolFact);
+      let userName = $("#userName").val();
+      let coolFacts = generateCoolNameFacts(userName); 
 
-  });
+      console.log('you clicked the button');
+      console.log('from ln 12', generateCoolNameFacts(userName));
+      
+      $("#coolNameFactsOutput").html(coolFacts);
+  
 
-  let userGreeting = "Hello there, "; 
 
-  $("button").click(function () {
-    userGreeting += $("#fname").val();
+    });
 
-    $("#greetingOutput").text(userGreeting);
-  });
+
 });
 
-function generateNameFacts(userName) {
+function generateCoolNameFacts(userName) {
+  let coolFacts = ''; 
+  
+  coolFacts = nameLength(userName);
+  coolFacts += " <br> " + nameStart(userName);
+  coolFacts += "<h3> " + nameEnd(userName) + "</h3>";
+  coolFacts += "<h2>" + reverseName(userName) + "</h2>";
+  coolFacts += findSpititAnimal(userName);
 
-  coolFact = nameLength(userName);
-  coolFact += " <br> " + nameStart(userName);
-  coolFact += "<h3>" + nameEnd(userName) + "</h3>";
-  // coolFact = 'wow, cool name!';
-  console.log("initialized coolFact variable: " + coolFact);
-  return coolFact;
+  console.log("initialized the'm coolFacts variable: " + coolFacts); 
+
+  return coolFacts;
 }
 
 function nameLength(name) {
-
-  return "your name is " + name.length + " letters long!";
+  return "Your name is " + name.length + " letters long!"; 
 }
 
 function nameStart(name) {
-
-  return "your name starts with " + name[0];
+  return "the first letter of your name is " + name[0]
 }
 
 function nameEnd(name) {
+  
+  let lastIndex = name.length - 1
 
-  let lastIndex = name.length - 1;
-
-  return "your name ends with " + name[lastIndex];
+  return "the last letter of your name is " + name[lastIndex]
 }
 
-//function findSpiritAnimal(name) {
+function reverseName(name) {
+  
+  let arrName = name.split(); 
+
+  revName = arrName.reverse();
+     
+}
+
+
+function findSpiritAnimal(name) {
   //some control structure (if/then?)
+  if (name[0] == 'A') {
+    return "your spirit animal is a tiger"
+  }
+
+  else {
+    return "your spirit animal is a lion"
+  }
 
 //some arbitrary thing about name (if starts with vowel?)
 
 //then this animal
 
 //or other animal
-//}
+}
